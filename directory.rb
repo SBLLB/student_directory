@@ -15,3 +15,7 @@ puts "Schlap Alias"
 puts "James Scarter"
 puts "Karin Nielsen"
 puts "Denise Yu"
+
+print "Overall, we have "
+print 9
+puts " great students"
