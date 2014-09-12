@@ -1,23 +1,28 @@
-student_count = 9
+#Putting the studnet names into an array.
 
-#Printing the names of our students.
-puts "The students of my cohort at Makers Academy"
-puts "------------------"
-puts "Rachel Nolan"
-puts "Tim Scully"
-puts "Elena Garrone"
-puts "Sandrine Madame"
-puts "Andrew Hercules"
-puts "Stephen Giles"
-puts "Bernard Mordan"
-puts "Nicole Pell"
-puts "Yvette Cook"
-puts "Faddie H"
-puts "Anna Schechter"
-puts "Schlap Alias"
-puts "James Scarter"
-puts "Karin Nielsen"
-puts "Denise Yu"
+students = [	
+	"Rachel Nolan",
+	"Tim Scully",
+	"Elena Garrone",
+	"Sandrine Madame",
+	"Andrew Hercules",
+	"Stephen Giles",
+	"Bernard Mordan",
+	"Nicole Pell",
+	"Yvette Cook",
+	"Faddie Hman",
+	"Anna Schechter",
+	"Schlap Alias",
+	"James Scarter",
+	"Karin Nielsen",
+	"Denise Yu"
+]
 
-#Using the print method to diplay the student count on one line
-puts "Overall, we have #{student_count} great students"
+#using the .each method to print each name.
+students.each do |student|
+	puts student
+end
+
+#Chaning print total to work off the student array.
+puts "Overall, we have #{students.length} great students."
+
