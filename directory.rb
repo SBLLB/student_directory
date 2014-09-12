@@ -1,39 +1,48 @@
-#Putting the studnet names into an array.
-
-students = [	
-	{:name => "Rachel Nolan", :cohort => :October},
-	{:name => "Tim Scully", :cohort => :October},
-	{:name => "Elena Garrone", :cohort => :October},
-	{:name => "Sandrine Madame", :cohort => :October},
-	{:name => "Andrew Hercules", :cohort => :October},
-	{:name => "Stephen Giles", :cohort => :October},
-	{:name => "Bernard Mordan", :cohort => :October},
-	{:name => "Nicole Pell", :cohort => :October},
-	{:name => "Yvette Cook", :cohort => :October},
-	{:name => "Faddie Hman", :cohort => :October},
-	{:name => "Anna Schechter", :cohort => :October},
-	{:name => "Schlap Alias", :cohort => :October},
-	{:name => "James Scarter", :cohort => :October},
-	{:name => "Karin Nielsen", :cohort => :October},
-	{:name => "Denise Yu", :cohort => :October}
-]
-
-#Defining a method to print the header... 
+#Defining a method to print the header 
 def print_header
 	puts "The students of my cohort at Makers Academy"
 	puts "----------------"
 end
 
+#Defining a method to print the student details 
 def print(students)
 	students.each do |student|
 		puts "#{student[:name]} (#{student[:cohort]} cohort)"
 	end
 end
 
+#Defining a method to print the footer
 def print_footer(names)
-	puts "Overall, we have #{names.length} great students"
+	puts "Overall, we have #{names.length} great students."
 end
 
+#Asking the user for input 
+def input_students
+	puts "Please enter the names of the students"
+	puts "To finish, just hit return twice."
+
+	#Create empty array
+	students = []
+	#Get the first names
+	name = gets.chomp
+	#While the name is not empty, repeat this code. 
+
+	while !name.empty? do
+		#Add student hash to the array
+		students << {:name => name, :cohort => :October}
+		puts "Now we have #{students.length} students."
+		#Get another name from user
+		name = gets.chomp
+	end
+	#return the array of students
+	students
+end
+
+students = input_students
 print_header
 print(students)
 print_footer(students)
+
+
+
+
