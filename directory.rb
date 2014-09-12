@@ -1,3 +1,4 @@
+#Printing the names of our students.
 puts "The students of my cohort at Makers Academy"
 puts "------------------"
 puts "Rachel Nolan"
@@ -16,6 +17,7 @@ puts "James Scarter"
 puts "Karin Nielsen"
 puts "Denise Yu"
 
+#Using the print method to diplay the student count on one line
 print "Overall, we have "
 print 9
 puts " great students"
