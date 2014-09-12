@@ -1,3 +1,5 @@
+student_count = 9
+
 #Printing the names of our students.
 puts "The students of my cohort at Makers Academy"
 puts "------------------"
@@ -18,6 +20,4 @@ puts "Karin Nielsen"
 puts "Denise Yu"
 
 #Using the print method to diplay the student count on one line
-print "Overall, we have "
-print 9
-puts " great students"
+puts "Overall, we have #{student_count} great students"
