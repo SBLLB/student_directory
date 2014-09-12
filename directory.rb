@@ -1,21 +1,21 @@
 #Putting the studnet names into an array.
 
 students = [	
-	"Rachel Nolan",
-	"Tim Scully",
-	"Elena Garrone",
-	"Sandrine Madame",
-	"Andrew Hercules",
-	"Stephen Giles",
-	"Bernard Mordan",
-	"Nicole Pell",
-	"Yvette Cook",
-	"Faddie Hman",
-	"Anna Schechter",
-	"Schlap Alias",
-	"James Scarter",
-	"Karin Nielsen",
-	"Denise Yu"
+	{:name => "Rachel Nolan", :cohort => :October},
+	{:name => "Tim Scully", :cohort => :October},
+	{:name => "Elena Garrone", :cohort => :October},
+	{:name => "Sandrine Madame", :cohort => :October},
+	{:name => "Andrew Hercules", :cohort => :October},
+	{:name => "Stephen Giles", :cohort => :October},
+	{:name => "Bernard Mordan", :cohort => :October},
+	{:name => "Nicole Pell", :cohort => :October},
+	{:name => "Yvette Cook", :cohort => :October},
+	{:name => "Faddie Hman", :cohort => :October},
+	{:name => "Anna Schechter", :cohort => :October},
+	{:name => "Schlap Alias", :cohort => :October},
+	{:name => "James Scarter", :cohort => :October},
+	{:name => "Karin Nielsen", :cohort => :October},
+	{:name => "Denise Yu", :cohort => :October}
 ]
 
 #Defining a method to print the header... 
@@ -24,9 +24,9 @@ def print_header
 	puts "----------------"
 end
 
-def print(names)
-	names.each do |name|
-		puts name
+def print(students)
+	students.each do |student|
+		puts "#{student[:name]} (#{student[:cohort]} cohort)"
 	end
 end
 
