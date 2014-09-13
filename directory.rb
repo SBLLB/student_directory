@@ -27,7 +27,7 @@ def input_students
 	#While the name is not empty, repeat this code. 
 	while !name.empty? do
 		#Add student hash to the array
-		@students << {:name => name, :cohort => :October}
+		add_student_to_hash(name, :October)
 		puts "Now we have #{@students.length} students."
 		#Get another name from user
 		name = gets.chomp
