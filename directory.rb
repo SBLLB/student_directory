@@ -34,11 +34,13 @@ def input_students
 	end
 end
 
+
 def print_menu
 	#print menu and ask user what to
 	puts "1. Input the students"
 	puts "2. Show the students"
 	puts "3. Save the students list to students.csv"
+	puts "4. Load students from the exisiting csv file"
 	puts "9. Exit"#9 beacuse we'll be adding more items
 end
 
@@ -57,6 +59,20 @@ def save_students
 		csv_line = student_data.join(",")
 		file.puts csv_line
 	end
+	puts "The list of students has been saved to a csv file."
+	file.close
+end
+
+def add_student_to_hash(name, cohort)
+	@students << {:name => name, :cohort => cohort.to_sym}
+end
+
+def load_students
+	file = File.open("students.csv", "r")
+	file.readlines.each do |line|
+		name, cohort = line.chomp.split(',')
+		add_student_to_hash(name, cohort)
+	end
 	file.close
 end
 
@@ -68,6 +84,8 @@ def process(selection)
 			show_students
 		when "3"
 			save_students
+		when "4"
+			load_students
 		when "9"
 			exit #this will cause program to terminate
 		else
