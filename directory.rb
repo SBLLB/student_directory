@@ -7,7 +7,7 @@ end
 #Defining a method to print the student details 
 def printout(students)
 	students.each_with_index do |student, index|
-		puts "#{index + 1} #{student[:name]} (#{student[:cohort]} cohort)".center(50)
+		puts "#{index + 1} #{student[:name]} (Average Grade: #{student[:grade]}) (#{student[:cohort]} cohort)".center(50)
 	end
 end
 
@@ -28,8 +28,10 @@ def input_students
 	#While the name is not empty, repeat this code. 
 
 	while !name.empty? do
+		puts "What's the student's average grade?"
+		grade = gets.chomp
 		#Add student hash to the array
-		students << {:name => name, :cohort => :October}
+		students << {:name => name, :grade => grade, :cohort => :October}
 		puts "Now we have #{students.length} students.".center(50)
 		#Get another name from user
 		name = gets.chomp
