@@ -1,25 +1,25 @@
 #Defining a method to print the header 
 def print_header
-	puts "The students of my cohort at Makers Academy"
-	puts "----------------"
+	print "The students of my cohort at Makers Academy\n"
+	print "----------------\n"
 end
 
 #Defining a method to print the student details 
-def print(students)
+def printout(students)
 	students.each_with_index do |student, index|
-		puts "#{index + 1} #{student[:name]} (#{student[:cohort]} cohort)"
+		print "#{index + 1} #{student[:name]} (#{student[:cohort]} cohort)\n"
 	end
 end
 
 #Defining a method to print the footer
 def print_footer(names)
-	puts "Overall, we have #{names.length} great students."
+	print "Overall, we have #{names.length} great students.\n"
 end
 
 #Asking the user for input 
 def input_students
-	puts "Please enter the names of the students"
-	puts "To finish, just hit return twice."
+	print "Please enter the names of the students\n"
+	print "To finish, just hit return twice.\n"
 
 	#Create empty array
 	students = []
@@ -30,7 +30,7 @@ def input_students
 	while !name.empty? do
 		#Add student hash to the array
 		students << {:name => name, :cohort => :October}
-		puts "Now we have #{students.length} students."
+		print "Now we have #{students.length} students.\n"
 		#Get another name from user
 		name = gets.chomp
 	end
@@ -40,7 +40,7 @@ end
 
 students = input_students
 print_header
-print(students)
+printout(students)
 print_footer(students)
 
 
